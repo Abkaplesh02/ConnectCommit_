@@ -1,12 +1,21 @@
-# React + Vite
+ ConnectCommit – A Developer Networking Platform (MERN Stack)<br><br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ConnectCommit is a full-stack web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that serves as a Tinder-style platform for developers to connect, collaborate, and create. Whether you're looking for a co-founder, open-source partner, or someone to brainstorm side projects with — ConnectCommit makes networking easier and fun.<br><br>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>🛠️ Tech Stack<br><br>
+Frontend: React.js, Redux, Tailwind CSS<br>
 
-## Expanding the ESLint configuration
+Backend: Node.js, Express.js<br>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Database: MongoDB (Mongoose)<br>
+
+Authentication: JWT (JSON Web Tokens)<br>
+
+Real-time Communication: Socket.IO or Firebase (if used)<br>
+
+Deployment: [Heroku/Vercel/Render]<br>
+
+<br>________Project Setup________<br><br>
+-Create a Vite + React application<br>
+-Remove unecessary code and create a Hello world app<br>
