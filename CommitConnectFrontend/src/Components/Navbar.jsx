@@ -1,8 +1,24 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LogoPic from "../assets/StackSpark.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { BASE_URL_Logout } from "../utils/constants";
+import { removeUser } from "../redux/userSlice";
 const Navbar=()=>{
   const user=useSelector((store)=>store.user);
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
+
+  const handleLogout=async()=>{
+    try{
+      await axios.post(BASE_URL_Logout,{},{withCredentials:true});
+      dispatch(removeUser());
+      navigate("/login");
+    }
+    catch(err){
+      console.log(err.message);
+    }
+  }
     return (
         <div className="navbar bg-base-300 shadow-sm">
   <div className="flex-1 items-center">
@@ -29,7 +45,7 @@ const Navbar=()=>{
           </Link>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><a onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
         }
