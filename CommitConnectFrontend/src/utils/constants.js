@@ -5,3 +5,5 @@ export const BASE_URL_PROFILE="http://localhost:7777/profile/view";
 export const BASE_URL_Logout="http://localhost:7777/Logout";
 
 export const BASE_URL_FEED="http://localhost:7777/feed";
+
+export const BASE_URL_EDIT="http://localhost:7777/profile/edit";
