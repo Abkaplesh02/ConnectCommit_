@@ -9,3 +9,5 @@ export const BASE_URL_FEED="http://localhost:7777/feed";
 export const BASE_URL_EDIT="http://localhost:7777/profile/edit";
 
 export const BASE_URL_CONNECTIONS="http://localhost:7777/user/connections";
+
+export const BASE_URL_REQUESTS="http://localhost:7777/user/requests/recieved";
