@@ -11,3 +11,5 @@ export const BASE_URL_EDIT="http://localhost:7777/profile/edit";
 export const BASE_URL_CONNECTIONS="http://localhost:7777/user/connections";
 
 export const BASE_URL_REQUESTS="http://localhost:7777/user/requests/recieved";
+
+export const BASE_URL_RESPONSE="http://localhost:7777/request/review/";

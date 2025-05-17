@@ -8,7 +8,8 @@ const ConnectionRequest=createSlice({
             return action.payload;
         },
         removeConnectionRequest:(state,action)=>{
-            return null;
+            const arr=state.filter((connection)=>(connection._id!=action.payload));
+            return arr;
         },
     }
 })

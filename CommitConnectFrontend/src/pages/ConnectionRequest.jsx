@@ -1,15 +1,26 @@
 import axios from "axios";
-import { BASE_URL_REQUESTS } from "../utils/constants";
+import { BASE_URL_REQUESTS, BASE_URL_RESPONSE } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addConnectionRequests } from "../redux/ConnectionRequest";
-import { __DO_NOT_USE__ActionTypes } from "@reduxjs/toolkit";
+import { addConnectionRequests, removeConnectionRequest } from "../redux/ConnectionRequest";
+
 
 const ConnectionRequest=()=>{
 
     const requests=useSelector((store)=>store.requests);
 
     const dispatch=useDispatch();
+
+    const reviewRequest=async(status,_id)=>{
+        try{
+            const res=await axios.post(BASE_URL_RESPONSE+status+"/"+_id,{},{withCredentials:true});
+            dispatch(removeConnectionRequest(_id));
+        }
+        catch(err){
+            console.log(err.message);
+        }
+    }
+
     const fetchRequests =async()=>{
         try{
             const res=await axios.get(BASE_URL_REQUESTS,{withCredentials:true});
@@ -27,7 +38,7 @@ const ConnectionRequest=()=>{
 
     if(!requests) return;
 
-    if(requests.length===0) return <h1 className="text-bold text-2xl">No Connections Found</h1>
+    if(requests.length===0) return <h1 className="text-center my-6 text-bold text-4xl text-gray-500">No Request Found</h1>
     return (
 
         <div className=" text-center my-10 w-1/2 mx-auto">
@@ -45,8 +56,8 @@ const ConnectionRequest=()=>{
                    {age && gender &&   <p>{age+","+gender}</p>}
                  </div>
                  <div className="flex">
-                    <button className="mx-2 btn btn-primary">Reject</button>
-                   <button className=" mx-2 btn btn-secondary">Accept</button>
+                    <button onClick={()=>reviewRequest("rejected",request._id)} className="mx-2 btn btn-primary">Reject</button>
+                   <button  onClick={()=>reviewRequest("accepted",request._id)} className=" mx-2 btn btn-secondary">Accept</button>
                  </div>
                  </div>
 )})}
