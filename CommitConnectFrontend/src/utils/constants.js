@@ -1,19 +1,19 @@
-export const BASE_URL_REGISTER="http://localhost:7777/signup";
+export const BASE_URL_REGISTER="/api/signup";
 
-export const BASE_URL_Login="http://localhost:7777/Login";
+export const BASE_URL_Login="/api/Login";
 
-export const BASE_URL_PROFILE="http://localhost:7777/profile/view";
+export const BASE_URL_PROFILE="/api/view";
 
-export const BASE_URL_Logout="http://localhost:7777/Logout";
+export const BASE_URL_Logout="/api/Logout";
 
-export const BASE_URL_FEED="http://localhost:7777/feed";
+export const BASE_URL_FEED="/api/feed";
 
-export const BASE_URL_EDIT="http://localhost:7777/profile/edit";
+export const BASE_URL_EDIT="/api/profile/edit";
 
-export const BASE_URL_CONNECTIONS="http://localhost:7777/user/connections";
+export const BASE_URL_CONNECTIONS="/api/user/connections";
 
-export const BASE_URL_REQUESTS="http://localhost:7777/user/requests/recieved";
+export const BASE_URL_REQUESTS="/api/user/requests/recieved";
 
-export const BASE_URL_RESPONSE="http://localhost:7777/request/review/";
+export const BASE_URL_RESPONSE="/api/request/review/";
 
-export const BASE_URL_Interest="http://localhost:7777/request/send/";
+export const BASE_URL_Interest="/api/request/send/";
