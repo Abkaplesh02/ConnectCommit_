@@ -17,7 +17,6 @@ const Body=()=>{
 
             const user=await axios.get(BASE_URL_PROFILE ,{withCredentials:true});
             dispatch(addUser(user.data));
-            console.log(user.data);
         }
         catch(err){
             if(err.status==401){
